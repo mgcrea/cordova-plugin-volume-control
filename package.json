@@ -1,0 +1,29 @@
+{
+  "name": "cordova-volume-control",
+  "version": "0.1.1",
+  "description": "Cordova Volume Control Plugin",
+  "cordova": {
+    "id": "cordova-volume-control",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgcrea/cordova-plugin-volume-control"
+  },
+  "keywords": [
+    "cordova",
+    "unity",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova-ios",
+      "version": ">=3.6.0"
+    }
+  ],
+  "author": "Olivier Louvignes <olivier@mg-crea.com>",
+  "license": "MIT"
+}
