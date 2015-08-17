@@ -4,7 +4,7 @@ This plugin provides a simple way to interact with the volume of your `UIWebView
 
 * This plugin uses private `AVSystemController.h` APIs and can't be used for AppStore apps.
 
-* This plugin is built for `cordova@^5.0`.
+* This plugin is built for `cordova@^3.6`.
 
 * This plugin currently supports iOS.
 
