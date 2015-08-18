@@ -20,3 +20,7 @@ exports.setVolume = function(volume, success, error) {
   }
   exec(success, error, 'VolumeControl', 'setVolume', [volume * 1]);
 };
+
+exports.getCategory = function(volume, success, error) {
+  exec(success, error, 'VolumeControl', 'getCategory', []);
+};
