@@ -21,6 +21,7 @@ Using this plugin requires [Cordova iOS](https://github.com/apache/cordova-ios).
     // After device ready, create a local alias
     var VolumeControl = cordova.plugins.VolumeControl;
 
+    VolumeControl.getVolume(console.log.bind(console));
     VolumeControl.getCategory(console.log.bind(console));
     VolumeControl.toggleMute();
     VolumeControl.isMuted(console.log.bind(console));

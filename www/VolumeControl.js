@@ -18,6 +18,10 @@ exports.isMuted = function(success, error) {
   exec(success, error, 'VolumeControl', 'isMuted', []);
 };
 
+exports.getVolume = function(success, error) {
+  exec(success, error, 'VolumeControl', 'getVolume', []);
+};
+
 exports.setVolume = function(volume, success, error) {
   if(volume > 1) {
     volume /= 100;

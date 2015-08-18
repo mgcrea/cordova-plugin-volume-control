@@ -10,6 +10,7 @@
 - (void)toggleMute:(CDVInvokedUrlCommand*)command;
 - (void)isMuted:(CDVInvokedUrlCommand*)command;
 - (void)setVolume:(CDVInvokedUrlCommand*)command;
+- (void)getVolume:(CDVInvokedUrlCommand*)command;
 - (void)getCategory:(CDVInvokedUrlCommand*)command;
 @end
 
@@ -77,6 +78,17 @@
     [privateInvocation getReturnValue:&result];
 
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:result];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)getVolume:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* pluginResult = nil;
+    DLog(@"getVolume");
+
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsFloat:audioSession.outputVolume];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
