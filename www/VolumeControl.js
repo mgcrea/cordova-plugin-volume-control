@@ -10,19 +10,8 @@ function defaults(object, source) {
   return object;
 }
 
-// exports.show = function(options, success, error) {
-//   defaults(options, {
-//     x: 200,
-//     y: 200,
-//     width: 512,
-//     height: 384
-//   });
-//   var args = [options.x, options.y, options.width, options.height];
-//   exec(success, error, 'Unity', 'show', args);
-// };
-
-exports.toggle = function(arg0, success, error) {
-  exec(success, error, 'VolumeControl', 'toggle', []);
+exports.toggleMute = function(arg0, success, error) {
+  exec(success, error, 'VolumeControl', 'toggleMute', []);
 };
 
 exports.setVolume = function(volume, success, error) {

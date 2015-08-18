@@ -7,16 +7,16 @@
   // Member variables go here.
 }
 
-- (void)toggle:(CDVInvokedUrlCommand*)command;
+- (void)toggleMute:(CDVInvokedUrlCommand*)command;
 - (void)setVolume:(CDVInvokedUrlCommand*)command;
 @end
 
 @implementation VolumeControl
 
-- (void)toggle:(CDVInvokedUrlCommand*)command
+- (void)toggleMute:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    DLog(@"toggle", volume);
+    DLog(@"toggleMute", volume);
 
     Class avSystemControllerClass = NSClassFromString(@"AVSystemController");
     id avSystemControllerInstance = [avSystemControllerClass performSelector:@selector(sharedAVSystemController)];
