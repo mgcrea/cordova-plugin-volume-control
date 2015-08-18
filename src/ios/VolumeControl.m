@@ -39,21 +39,19 @@
 - (void)isMuted:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    BOOL arg1;
     DLog(@"isMuted");
 
     Class avSystemControllerClass = NSClassFromString(@"AVSystemController");
     id avSystemControllerInstance = [avSystemControllerClass performSelector:@selector(sharedAVSystemController)];
 
+    BOOL result;
     NSInvocation *privateInvocation = [NSInvocation invocationWithMethodSignature:
                                       [avSystemControllerClass instanceMethodSignatureForSelector:
                                        @selector(getActiveCategoryMuted:)]];
     [privateInvocation setTarget:avSystemControllerInstance];
     [privateInvocation setSelector:@selector(getActiveCategoryMuted:)];
-    [privateInvocation setArgument:&arg1 atIndex:2];
+    [privateInvocation setArgument:&result atIndex:2];
     [privateInvocation invoke];
-    BOOL result;
-    [privateInvocation getReturnValue:&result];
 
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:result];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
