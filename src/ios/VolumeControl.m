@@ -88,7 +88,7 @@
 
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
 
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsFloat:audioSession.outputVolume];
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDouble:audioSession.outputVolume];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
