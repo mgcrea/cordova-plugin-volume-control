@@ -1,4 +1,4 @@
-# [Cordova Volume Control](https://github.com/mgcrea/cordova-plugin-volume-control) [![Release](https://img.shields.io/github/release/mgcrea/cordova-plugin-volume-control.svg)](https://github.com/mgcrea/cordova-plugin-volume-control/releases)
+# [Cordova Volume Control](https://github.com/mgcrea/cordova-plugin-volume-control) [![Release](https://img.shields.io/npm/v/cordova-volume-control.svg?style=flat)](https://github.com/mgcrea/cordova-plugin-volume-control/releases)
 
 This plugin provides a simple way to interact with the volume of your `UIWebView`.
 
