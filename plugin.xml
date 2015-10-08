@@ -5,6 +5,7 @@
     <clobbers target="cordova.plugins.VolumeControl" />
   </js-module>
   <platform name="ios">
+		<framework src="MediaPlayer.framework" />
     <config-file parent="/*" target="config.xml">
       <feature name="VolumeControl">
         <param name="ios-package" value="VolumeControl" />

@@ -32,3 +32,7 @@ exports.setVolume = function(volume, success, error) {
 exports.getCategory = function(success, error) {
   exec(success, error, 'VolumeControl', 'getCategory', []);
 };
+
+exports.hideVolume = function(success, error) {
+  exec(success, error, 'VolumeControl', 'hideVolume', []);
+};
